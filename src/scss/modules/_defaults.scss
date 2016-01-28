@@ -5,7 +5,8 @@
 }
 html {
   font-size: 62.5%;
-  background: radial-gradient(ellipse at center, $base 0, $darken 80%, $back 100%);
+  // background: radial-gradient(ellipse at center, $base 0, $darken 80%, $back 100%);
+  background: rgb(0,0,0);
 }
 body {
   font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;

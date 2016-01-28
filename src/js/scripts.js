@@ -2,8 +2,14 @@
 
   'use strict';
 
-  $(function () {
-    // FastShell
-  });
+  console.log("JS ready");
+
+  /*
+  * For jQuery Uncomment Below
+  */
+
+  // $(function () {
+  //       alert("jQuery is running");
+  // });
 
 })(jQuery, window, document);
