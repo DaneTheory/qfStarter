@@ -13,8 +13,7 @@
   text-rendering: optimizeLegibility; }
 
 html {
-  font-size: 62.5%;
-  background: black; }
+  font-size: 62.5%; }
 
 body {
   font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
@@ -380,14 +379,46 @@ td,
 th {
   padding: 0; }
 
-.logo {
-  margin: -58px 0 0 -100px;
+.logo svg, .logo img {
   position: absolute;
-  top: 50%;
-  left: 50%; }
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.qfSvg {
+  width: 100%;
+  fill: url(#qfPattern);
+  stroke: #58595B;
+  stroke-width: 0.25;
+  stroke-miterlimit: 10; }
 
 .nav ul {
   list-style: none; }
+
+#countdownBlock {
+  display: inline-block;
+  float: right;
+  text-align: center;
+  position: relative;
+  margin-top: 5%;
+  padding-right: 1%;
+  padding-left: 1%;
+  border: 2px #3FA5C3 solid;
+  border-right: none;
+  background: #3fa5c3; }
+  #countdownBlock h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: white; }
+  #countdownBlock h2 {
+    font-size: 3em;
+    margin: 0;
+    color: white; }
 
 @font-face {
   font-family: 'Font-Name';

@@ -2,9 +2,23 @@
 
 }
 .logo {
-  margin: -58px 0 0 -100px;
-  @include position(absolute, 50% 0 0 50%);
-  img {
+    svg,img {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      overflow: auto;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+}
 
-  }
+.qfSvg {
+  width:100%;
+  fill:url(#qfPattern);
+  stroke:#58595B;
+  stroke-width:0.25;
+  stroke-miterlimit:10;
 }
