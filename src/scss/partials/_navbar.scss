@@ -1,0 +1,33 @@
+.navbar {
+  font-family: 'latoregular';
+  ul {
+      list-style: none;
+      li {
+        float: left;
+        a {
+          color: #3fa5c3;
+          font-size: 12px;
+          font-weight: 300;
+          padding: 18px 10px;
+          letter-spacing: .5px;
+          text-decoration: none;
+          line-height: 2.5em;
+        }
+      }
+    }
+
+}
+
+.navLogo {
+  height: inherit;
+  margin: 14px 14px 14px 0;
+  padding: 0;
+  img {
+        height: 28px;
+  }
+}
+
+.navRight {
+  float: right;
+  margin: 0;
+}

@@ -1,24 +1,17 @@
 .header {
 
 }
-.logo {
-    svg,img {
-      position: absolute;
-      width: 50%;
-      height: 50%;
-      overflow: auto;
-      margin: auto;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
-}
 
-.qfSvg {
-  width:100%;
-  fill:url(#qfPattern);
-  stroke:#58595B;
-  stroke-width:0.25;
-  stroke-miterlimit:10;
+header {
+  // background-color: #3fa5c3;
+  float: left;
+  width: 100%;
+  background-image: none;
+  box-shadow: none;
+  margin: 0;
+  z-index: 100;
+  letter-spacing: .25px;
+  // border-radius: 0;
+  // border-style: none none solid none;
+  // border: 1px solid #368EA8;
 }

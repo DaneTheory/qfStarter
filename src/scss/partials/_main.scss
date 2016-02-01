@@ -2,26 +2,132 @@
 
 }
 
-#countdownBlock {
-  display: inline-block;
-  float: right;
-  text-align: center;
-  position: relative;
-  margin-top: 5%;
-  padding-right: 1%;
-  padding-left: 1%;
-  border: 2px #3FA5C3 solid;
-  border-right: none;
-  background: #3fa5c3;
+.logo {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      overflow: auto;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
 
-    h1 {
-      font-size: 1.5em;
-      margin: 0;
-      color: white;
+      svg {
+        margin-top: 10em;
+      }
+}
+
+.qfSvg {
+  width:100%;
+  fill:url(#qfPattern);
+  stroke:#58595B;
+  stroke-width:0.25;
+  stroke-miterlimit:10;
+}
+
+.slogan {
+  font-family: 'latoregular';
+  color: #3fa5c3;
+  h1 {
+    margin:0;
+  }
+  h6 {
+    line-height: 1em;
+    margin: 1em 0;
+    text-decoration: underline;
+  }
+}
+
+.sloganWrapper {
+  text-align: center;
+}
+
+.sloganLeft {
+  display: inline-block;
+  text-align: right;
+}
+
+.sloganRight {
+  display: inline-block;
+  background: #3fa5c3;
+  color: white;
+  width: 45%;
+  text-align: center;
+  margin-left: 4%;
+  vertical-align: bottom;
+}
+
+.getStartedIcon {
+  background: url(../img/rockOnIcon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1em 1em;
+  margin-right: 0.5em;
+}
+
+.endSoonBlock.competitions {
+  font-family: 'latoregular';
+  background: #3fa5c3;
+  color: #fff;
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 30%;
+  padding: 0.5em 1em;
+
+  h3 {
+    text-align: left;
+  }
+  h2 {
+    font-size: 3.5em;
+    margin: 0;
+    text-align: center;
+    line-height: 1em;
+  }
+  h4 {
+    font-size: 1em;
+    text-align: center;
+    margin: 0.5em;
+
+    span {
+      font-size: 2em;
+      margin-left: 0.25em;
     }
-    h2 {
-      font-size: 3em;
-      margin: 0;
-      color:white;
+  }
+}
+
+.endSoonBlock.requests {
+  font-family: 'latoregular';
+  background: #3fa5c3;
+  color: #fff;
+  position: absolute;
+  top: 75%;
+  right: 0;
+  width: 30%;
+  padding: 0.5em 1em;
+
+  h3 {
+    text-align: left;
+  }
+  h2 {
+    font-size: 3.5em;
+    margin: 0;
+    text-align: center;
+    line-height: 1em;
+  }
+  h4 {
+    font-size: 1em;
+    text-align: center;
+    margin: 0.5em;
+
+    span {
+      font-size: 2em;
+      margin-left: 0.25em;
     }
+  }
+}
+
+.endSoonBlock h2 {
+  font-family: 'cornerstoneregular';
 }

@@ -379,7 +379,42 @@ td,
 th {
   padding: 0; }
 
-.logo svg, .logo img {
+header {
+  float: left;
+  width: 100%;
+  background-image: none;
+  box-shadow: none;
+  margin: 0;
+  z-index: 100;
+  letter-spacing: .25px; }
+
+.navbar {
+  font-family: 'latoregular'; }
+  .navbar ul {
+    list-style: none; }
+    .navbar ul li {
+      float: left; }
+      .navbar ul li a {
+        color: #3fa5c3;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 18px 10px;
+        letter-spacing: .5px;
+        text-decoration: none;
+        line-height: 2.5em; }
+
+.navLogo {
+  height: inherit;
+  margin: 14px 14px 14px 0;
+  padding: 0; }
+  .navLogo img {
+    height: 28px; }
+
+.navRight {
+  float: right;
+  margin: 0; }
+
+.logo {
   position: absolute;
   width: 50%;
   height: 50%;
@@ -389,6 +424,8 @@ th {
   left: 0;
   bottom: 0;
   right: 0; }
+  .logo svg {
+    margin-top: 10em; }
 
 .qfSvg {
   width: 100%;
@@ -397,28 +434,89 @@ th {
   stroke-width: 0.25;
   stroke-miterlimit: 10; }
 
-.nav ul {
-  list-style: none; }
+.slogan {
+  font-family: 'latoregular';
+  color: #3fa5c3; }
+  .slogan h1 {
+    margin: 0; }
+  .slogan h6 {
+    line-height: 1em;
+    margin: 1em 0;
+    text-decoration: underline; }
 
-#countdownBlock {
+.sloganWrapper {
+  text-align: center; }
+
+.sloganLeft {
   display: inline-block;
-  float: right;
+  text-align: right; }
+
+.sloganRight {
+  display: inline-block;
+  background: #3fa5c3;
+  color: white;
+  width: 45%;
   text-align: center;
-  position: relative;
-  margin-top: 5%;
-  padding-right: 1%;
-  padding-left: 1%;
-  border: 2px #3FA5C3 solid;
-  border-right: none;
-  background: #3fa5c3; }
-  #countdownBlock h1 {
-    font-size: 1.5em;
+  margin-left: 4%;
+  vertical-align: bottom; }
+
+.getStartedIcon {
+  background: url(../img/rockOnIcon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1em 1em;
+  margin-right: 0.5em; }
+
+.endSoonBlock.competitions {
+  font-family: 'latoregular';
+  background: #3fa5c3;
+  color: #fff;
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 30%;
+  padding: 0.5em 1em; }
+  .endSoonBlock.competitions h3 {
+    text-align: left; }
+  .endSoonBlock.competitions h2 {
+    font-size: 3.5em;
     margin: 0;
-    color: white; }
-  #countdownBlock h2 {
-    font-size: 3em;
+    text-align: center;
+    line-height: 1em; }
+  .endSoonBlock.competitions h4 {
+    font-size: 1em;
+    text-align: center;
+    margin: 0.5em; }
+    .endSoonBlock.competitions h4 span {
+      font-size: 2em;
+      margin-left: 0.25em; }
+
+.endSoonBlock.requests {
+  font-family: 'latoregular';
+  background: #3fa5c3;
+  color: #fff;
+  position: absolute;
+  top: 75%;
+  right: 0;
+  width: 30%;
+  padding: 0.5em 1em; }
+  .endSoonBlock.requests h3 {
+    text-align: left; }
+  .endSoonBlock.requests h2 {
+    font-size: 3.5em;
     margin: 0;
-    color: white; }
+    text-align: center;
+    line-height: 1em; }
+  .endSoonBlock.requests h4 {
+    font-size: 1em;
+    text-align: center;
+    margin: 0.5em; }
+    .endSoonBlock.requests h4 span {
+      font-size: 2em;
+      margin-left: 0.25em; }
+
+.endSoonBlock h2 {
+  font-family: 'cornerstoneregular'; }
 
 @font-face {
   font-family: 'Font-Name';
@@ -446,6 +544,27 @@ th {
   background: #333;
   color: #fff;
   text-shadow: none; }
+
+@font-face {
+  font-family: 'latoheavy';
+  src: url("../fonts/lato-heavy-webfont.eot");
+  src: url("../fonts/lato-heavy-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-heavy-webfont.woff2") format("woff2"), url("../fonts/lato-heavy-webfont.woff") format("woff"), url("../fonts/lato-heavy-webfont.ttf") format("truetype"), url("../fonts/lato-heavy-webfont.svg#latoheavy") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'latoregular';
+  src: url("../fonts/lato-regular-webfont.eot");
+  src: url("../fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-regular-webfont.woff2") format("woff2"), url("../fonts/lato-regular-webfont.woff") format("woff"), url("../fonts/lato-regular-webfont.ttf") format("truetype"), url("../fonts/lato-regular-webfont.svg#latoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'cornerstoneregular';
+  src: url("../fonts/cornerstone-webfont.eot");
+  src: url("../fonts/cornerstone-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/cornerstone-webfont.woff2") format("woff2"), url("../fonts/cornerstone-webfont.woff") format("woff"), url("../fonts/cornerstone-webfont.ttf") format("truetype"), url("../fonts/cornerstone-webfont.svg#cornerstoneregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 @media print {
   * {
