@@ -548,7 +548,7 @@ header {
 @media only screen and (min-width: 960px) {
   .navLogo {
     height: inherit;
-    margin: 14px 14px 14px 0;
+    margin: 0;
     padding: 0; }
     .navLogo img {
       height: 28px; } }
@@ -576,7 +576,8 @@ header {
   -webkit-animation-duration: 400ms;
           animation-duration: 400ms; }
   .logo #qfLogoSVG {
-    margin-top: 10em; }
+    margin-top: 10em;
+    background: url("/assets/img/testGif2.gif"); }
 
 .logo.fadeIn {
   -webkit-animation-delay: 0.3s;
