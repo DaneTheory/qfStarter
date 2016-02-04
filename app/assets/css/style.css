@@ -389,7 +389,16 @@ header {
   letter-spacing: .25px; }
 
 .navbar {
-  font-family: 'latoregular'; }
+  position: relative;
+  font-family: 'latoregular';
+  top: -2em;
+  opacity: 0;
+  -webkit-animation: fadeInUp ease-in-out 1;
+          animation: fadeInUp ease-in-out 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 375ms;
+          animation-duration: 375ms; }
   .navbar ul {
     list-style: none; }
     .navbar ul li {
@@ -403,46 +412,196 @@ header {
         text-decoration: none;
         line-height: 2.5em; }
 
-.navLogo {
-  height: inherit;
-  margin: 14px 14px 14px 0;
-  padding: 0; }
+@media only screen and (min-width: 320px) and (max-width: 959px) {
+  .navbar ul.navLeft li {
+    float: none; }
+    .navbar ul.navLeft li:first-child {
+      padding-top: 1em;
+      margin-left: 0; }
   .navLogo img {
-    height: 28px; }
+    height: 20px; }
+  .navbar ul.navRight li {
+    float: none;
+    padding-top: 0; }
+  nav.navbar {
+    background: #3fa5c3;
+    width: 100%;
+    z-index: 999;
+    padding-bottom: 100%;
+    left: -100%; }
+    nav.navbar ul li a {
+      color: white; }
+  ul.navLeft {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0; }
+  ul.navRight {
+    float: none;
+    padding-left: 0; }
+  nav.navbar.fadeInUp ul {
+    margin-left: 1em; }
+  nav.navbar.fadeInUp ul li {
+    margin-left: 1em; }
+  header .container {
+    height: 4.85em;
+    background: #3fa5c3; }
+  .menu-icon {
+    margin: auto;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 2em;
+    height: 2em;
+    z-index: 2; }
+  .menu-icon span {
+    position: relative;
+    display: block;
+    width: 2em;
+    height: 2px;
+    background-color: white;
+    transition: top 0.2s cubic-bezier(0.3, 1.4, 0.7, 1) 0.2s, bottom 0.2s cubic-bezier(0.3, 1.4, 0.7, 1) 0.2s, -webkit-transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), top 0.2s cubic-bezier(0.3, 1.4, 0.7, 1) 0.2s, bottom 0.2s cubic-bezier(0.3, 1.4, 0.7, 1) 0.2s;
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), top 0.2s cubic-bezier(0.3, 1.4, 0.7, 1) 0.2s, bottom 0.2s cubic-bezier(0.3, 1.4, 0.7, 1) 0.2s, -webkit-transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .menu-icon span:first-of-type {
+    top: -5px; }
+  .menu-icon span:last-of-type {
+    bottom: -5px; }
+  .menu-icon.active span {
+    transition: top 0.2s cubic-bezier(0.3, 1.4, 0.7, 1), bottom 0.2s cubic-bezier(0.3, 1.4, 0.7, 1), -webkit-transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s, top 0.2s cubic-bezier(0.3, 1.4, 0.7, 1), bottom 0.2s cubic-bezier(0.3, 1.4, 0.7, 1);
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s, top 0.2s cubic-bezier(0.3, 1.4, 0.7, 1), bottom 0.2s cubic-bezier(0.3, 1.4, 0.7, 1), -webkit-transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s; }
+  .menu-icon.active span:first-of-type {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 1px; }
+  .menu-icon.active span:last-of-type {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 1px; }
+  .menu-icon.active span:nth-child(2) {
+    display: none; }
+  .ring {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    opacity: 0;
+    margin: auto;
+    position: absolute;
+    top: 2.5%;
+    left: 3.5%;
+    width: 2.85em;
+    height: 2.85em; }
+  .ring.run {
+    -webkit-animation-duration: 0.8s;
+            animation-duration: 0.8s;
+    -webkit-animation-name: pulse;
+            animation-name: pulse;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .navbar.showNav {
+    -webkit-animation: showNavigation;
+            animation: showNavigation;
+    -webkit-animation-duration: 375ms;
+            animation-duration: 375ms;
+    -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.1, 0.1);
+              transform: scale(0.1, 0.1);
+      opacity: 0; }
+    50% {
+      opacity: 1; }
+    100% {
+      -webkit-transform: scale(1.5, 1.5);
+              transform: scale(1.5, 1.5);
+      opacity: 0; } }
+  @keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.1, 0.1);
+              transform: scale(0.1, 0.1);
+      opacity: 0; }
+    50% {
+      opacity: 1; }
+    100% {
+      -webkit-transform: scale(1.5, 1.5);
+              transform: scale(1.5, 1.5);
+      opacity: 0; } }
+  @-webkit-keyframes showNavigation {
+    0% {
+      left: -100%; }
+    100% {
+      left: 100%; } }
+  @keyframes showNavigation {
+    0% {
+      left: -100%; }
+    100% {
+      left: 100%; } } }
+
+.navbar.fadeInUp {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s; }
+
+@media only screen and (min-width: 960px) {
+  .navLogo {
+    height: inherit;
+    margin: 14px 14px 14px 0;
+    padding: 0; }
+    .navLogo img {
+      height: 28px; } }
 
 .navRight {
   float: right;
+  padding-right: 3em;
   margin: 0; }
 
 .logo {
   position: absolute;
-  width: 50%;
-  height: 50%;
+  width: 75%;
+  height: 75%;
   overflow: auto;
   margin: auto;
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0; }
-  .logo svg {
+  right: 0;
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in-out 1;
+          animation: fadeIn ease-in-out 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms; }
+  .logo #qfLogoSVG {
     margin-top: 10em; }
+
+.logo.fadeIn {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
 
 .qfSvg {
   width: 100%;
   fill: url(#qfPattern);
-  stroke: #58595B;
-  stroke-width: 0.25;
-  stroke-miterlimit: 10; }
+  stroke: none; }
 
 .slogan {
   font-family: 'latoregular';
   color: #3fa5c3; }
   .slogan h1 {
-    margin: 0; }
+    margin: 0;
+    font-size: 2.85em; }
+  .slogan h3 {
+    font-size: 1.6em; }
   .slogan h6 {
-    line-height: 1em;
-    margin: 1em 0;
-    text-decoration: underline; }
+    line-height: 1.25em;
+    margin: 0.5em 0;
+    font-size: 1.25em;
+    border-bottom: 1px solid #3fa5c3;
+    display: inline-block;
+    cursor: pointer; }
 
 .sloganWrapper {
   text-align: center; }
@@ -454,35 +613,48 @@ header {
 .sloganRight {
   display: inline-block;
   background: #3fa5c3;
-  color: white;
-  width: 45%;
+  color: #fff;
+  width: 40%;
   text-align: center;
-  margin-left: 4%;
-  vertical-align: bottom; }
+  margin-left: 5%;
+  vertical-align: bottom;
+  cursor: pointer; }
 
-.getStartedIcon {
-  background: url(../img/rockOnIcon.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 1em 1em;
-  margin-right: 0.5em; }
+#hand {
+  display: inline-block;
+  width: 7%;
+  vertical-align: middle;
+  margin-right: 0.25em; }
+
+.handOutline {
+  fill: #FFFFFF; }
+
+.fingers {
+  fill: #3FA5C3; }
 
 .endSoonBlock.competitions {
   font-family: 'latoregular';
   background: #3fa5c3;
   color: #fff;
   position: absolute;
-  top: 15%;
-  right: 0;
-  width: 30%;
-  padding: 0.5em 1em; }
-  .endSoonBlock.competitions h3 {
-    text-align: left; }
+  bottom: 0;
+  width: 25%;
+  padding: 0.5em 1em;
+  left: -25%;
+  -webkit-animation: slideInLeft ease-in-out 1;
+          animation: slideInLeft ease-in-out 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms; }
   .endSoonBlock.competitions h2 {
-    font-size: 3.5em;
+    font-size: 3.25em;
     margin: 0;
     text-align: center;
     line-height: 1em; }
+  .endSoonBlock.competitions h3 {
+    text-align: left;
+    margin-bottom: 1.5em; }
   .endSoonBlock.competitions h4 {
     font-size: 1em;
     text-align: center;
@@ -496,17 +668,24 @@ header {
   background: #3fa5c3;
   color: #fff;
   position: absolute;
-  top: 75%;
-  right: 0;
-  width: 30%;
-  padding: 0.5em 1em; }
-  .endSoonBlock.requests h3 {
-    text-align: left; }
+  bottom: 0;
+  right: -25%;
+  width: 25%;
+  padding: 0.5em 1em;
+  -webkit-animation: slideInRight ease-in-out 1;
+          animation: slideInRight ease-in-out 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 275ms;
+          animation-duration: 275ms; }
   .endSoonBlock.requests h2 {
-    font-size: 3.5em;
+    font-size: 3.25em;
     margin: 0;
     text-align: center;
     line-height: 1em; }
+  .endSoonBlock.requests h3 {
+    text-align: left;
+    margin-bottom: 1.5em; }
   .endSoonBlock.requests h4 {
     font-size: 1em;
     text-align: center;
@@ -515,8 +694,263 @@ header {
       font-size: 2em;
       margin-left: 0.25em; }
 
+.endSoonBlock .subCta {
+  text-align: center; }
+  .endSoonBlock .subCta .subCtaLeft, .endSoonBlock .subCta .subCtaRight {
+    display: inline-block; }
+
 .endSoonBlock h2 {
   font-family: 'cornerstoneregular'; }
+  .endSoonBlock h2 .time {
+    font-family: 'latoregular';
+    font-size: 0.35em; }
+
+.endSoonBlock.slideInLeft {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+
+.endSoonBlock.slideInRight {
+  -webkit-animation-delay: 1.35s;
+          animation-delay: 1.35s; }
+
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 50%; }
+
+.arrow {
+  width: 2.5em;
+  height: 2.5em;
+  bottom: -5%;
+  margin: -1em 0 0 -1em;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px #3fa5c3 solid;
+  border-bottom: 2px #3fa5c3 solid;
+  -webkit-animation: fadeInDown ease-in-out 1;
+          animation: fadeInDown ease-in-out 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 285ms;
+          animation-duration: 285ms; }
+  .arrow:before {
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0em -1.2em;
+    opacity: 0.9;
+    border-left: none;
+    border-top: none;
+    border-right: 2px #3fa5c3 solid;
+    border-bottom: 2px #3fa5c3 solid;
+    -webkit-animation-duration: 1.35s;
+            animation-duration: 1.35s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: arrow;
+            animation-name: arrow;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+
+.arrow.arrowIn {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s; }
+
+@media only screen and (min-width: 320px) and (max-width: 959px) {
+  .slogan h1 {
+    margin: 0;
+    font-size: 1.2em; }
+  .slogan h3 {
+    font-size: 1em; }
+  .slogan h6 {
+    display: none; }
+  .sloganLeft {
+    margin-top: 0.25em; }
+  .sloganRight {
+    width: 60%;
+    margin-top: 1.5em; }
+  #hand {
+    width: 10%; }
+  #competitionsDemo, #requestsDemo {
+    width: 49%;
+    bottom: 10%; }
+    #competitionsDemo h3, #requestsDemo h3 {
+      font-size: 0.7em;
+      text-align: center; }
+    #competitionsDemo h2, #requestsDemo h2 {
+      font-size: 1.4em; }
+    #competitionsDemo h4, #requestsDemo h4 {
+      font-size: 0.4em; }
+  #competitionsDemo {
+    left: -50%; }
+  #requestsDemo {
+    right: -50%; }
+  .logo {
+    width: 90%;
+    height: 60%; }
+  .logo #qfLogoSVG {
+    margin-top: 4em; }
+  .arrow {
+    width: 2em;
+    height: 2em;
+    bottom: -5%; }
+  .arrow:before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0 -1em; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 959px) and (orientation: landscape) {
+  .slogan h1 {
+    margin: 0;
+    font-size: 2.5em; }
+  .sloganWrapper {
+    text-align: center; }
+  .sloganLeft {
+    display: inline-block;
+    text-align: center; }
+  .sloganRight {
+    margin-left: auto;
+    width: 35%;
+    margin-right: auto; }
+  .logo #qfLogoSVG {
+    margin-top: 1em; }
+  .logo {
+    width: 75%;
+    height: 60%; }
+  #competitionsDemo, #requestsDemo {
+    bottom: 0%;
+    width: 25%; }
+    #competitionsDemo h3, #requestsDemo h3 {
+      font-size: 0.7em; }
+    #competitionsDemo h2, #requestsDemo h2 {
+      font-size: 1.5em; }
+    #competitionsDemo h4, #requestsDemo h4 {
+      font-size: 0.5em; }
+  .sloganRight {
+    width: 30%;
+    margin-top: 1em;
+    margin-left: 20%;
+    margin-right: 20%; } }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  #competitionsDemo, #requestsDemo {
+    width: 100%; }
+    #competitionsDemo h3, #requestsDemo h3 {
+      font-size: 1em; }
+    #competitionsDemo h2, #requestsDemo h2 {
+      font-size: 4em; }
+    #competitionsDemo h4, #requestsDemo h4 {
+      font-size: 0.85em; }
+  #requestsDemo {
+    right: -100%;
+    bottom: 8%; }
+  #competitionsDemo {
+    left: -100%;
+    bottom: 28%; }
+  .sloganWrapper {
+    text-align: center; }
+  .sloganLeft {
+    display: inline-block;
+    text-align: center; }
+  .slogan h1 {
+    font-size: 3.5em; }
+  .slogan h3 {
+    font-size: 1.2em; }
+  .slogan h6 {
+    display: inline-block; }
+  .logo #qfLogoSVG {
+    margin-top: 0em; } }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .endSoonBlock {
+    position: absolute;
+    width: 35%; }
+  #competitionsDemo h3, #requestsDemo h3 {
+    font-size: 1em; }
+  #competitionsDemo h2, #requestsDemo h2 {
+    font-size: 2.5em; }
+  #competitionsDemo h4, #requestsDemo h4 {
+    font-size: 0.7em; }
+  #requestsDemo {
+    bottom: 9%; }
+  #competitionsDemo {
+    bottom: 25%; }
+  #hand {
+    width: 7%; }
+  .slogan h3 {
+    font-size: 1em; }
+  .sloganRight {
+    width: 60%;
+    margin-top: 1.5em;
+    margin-left: auto; }
+  #competitionsDemo h3, #requestsDemo h3 {
+    font-size: 0.85em;
+    text-align: center; }
+  #competitionsDemo h4, #requestsDemo h4 {
+    font-size: .55em; } }
+
+@media only screen and (min-width: 850px) and (max-width: 959px) {
+  #competitionsDemo, #requestsDemo {
+    width: 40%;
+    bottom: 15%; }
+    #competitionsDemo h3, #requestsDemo h3 {
+      font-size: 1.1em; }
+    #competitionsDemo h2, #requestsDemo h2 {
+      font-size: 3em; }
+    #competitionsDemo h4, #requestsDemo h4 {
+      font-size: 0.7em; } }
+
+@media only screen and (min-width: 960px) and (max-width: 1260px) {
+  #competitionsDemo, #requestsDemo {
+    width: 40%;
+    bottom: 0%; }
+    #competitionsDemo h3, #requestsDemo h3 {
+      font-size: 1.1em; }
+    #competitionsDemo h2, #requestsDemo h2 {
+      font-size: 3.2em; }
+    #competitionsDemo h4, #requestsDemo h4 {
+      font-size: 0.8em; }
+  #competitionsDemo {
+    left: -40%; }
+  #requestsDemo {
+    right: -40%; }
+  #hand {
+    width: 8%;
+    vertical-align: middle;
+    margin-right: 0.35em; }
+  .slogan h3 {
+    font-size: 1.2em; }
+  .sloganRight {
+    width: 52%;
+    margin-top: 1.5em;
+    margin-left: auto; }
+  .sloganWrapper {
+    text-align: center; }
+  .sloganLeft {
+    display: inline-block;
+    text-align: center; }
+  .slogan h1 {
+    margin: 0;
+    font-size: 3.85em; } }
+
+@media only screen and (min-width: 1261px) {
+  #competitionsDemo, #requestsDemo {
+    bottom: 3%;
+    width: 30%; }
+    #competitionsDemo h3, #requestsDemo h3 {
+      font-size: 1.5em; }
+    #competitionsDemo h2, #requestsDemo h2 {
+      font-size: 3.6em; }
+    #competitionsDemo h4, #requestsDemo h4 {
+      font-size: 1.1em; }
+  #competitionsDemo {
+    left: -30%; }
+  #requestsDemo {
+    right: -30%; } }
 
 @font-face {
   font-family: 'Font-Name';
@@ -544,6 +978,126 @@ header {
   background: #333;
   color: #fff;
   text-shadow: none; }
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    top: -2em; }
+  to {
+    opacity: 1;
+    top: 0em; } }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    top: -2em; }
+  to {
+    opacity: 1;
+    top: 0em; } }
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    bottom: -5%; }
+  to {
+    opacity: 1;
+    bottom: 3%; } }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    bottom: -5%; }
+  to {
+    opacity: 1;
+    bottom: 3%; } }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes slideInLeft {
+  from {
+    left: -50%; }
+  to {
+    left: 0; } }
+
+@keyframes slideInLeft {
+  from {
+    left: -50%; }
+  to {
+    left: 0; } }
+
+@-webkit-keyframes slideInRight {
+  from {
+    right: -50%; }
+  to {
+    right: 0; } }
+
+@keyframes slideInRight {
+  from {
+    right: -50%; }
+  to {
+    right: 0; } }
+
+@-webkit-keyframes scrolldown {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  100% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px); } }
+
+@keyframes scrolldown {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  100% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px); } }
+
+@-webkit-keyframes scrollup {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  100% {
+    -webkit-transform: translate(0, -15px);
+            transform: translate(0, -15px); } }
+
+@keyframes scrollup {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  100% {
+    -webkit-transform: translate(0, -15px);
+            transform: translate(0, -15px); } }
+
+@-webkit-keyframes arrow {
+  0% {
+    opacity: 0.75;
+    -webkit-transform: translate(0em, 0em);
+            transform: translate(0em, 0em); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-1em, -1em);
+            transform: translate(-1em, -1em); } }
+
+@keyframes arrow {
+  0% {
+    opacity: 0.75;
+    -webkit-transform: translate(0em, 0em);
+            transform: translate(0em, 0em); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-1em, -1em);
+            transform: translate(-1em, -1em); } }
 
 @font-face {
   font-family: 'latoheavy';

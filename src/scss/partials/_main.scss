@@ -1,29 +1,31 @@
-.main {
-
-}
-
 .logo {
       position: absolute;
-      width: 50%;
-      height: 50%;
+      width: 75%;
+      height: 75%;
       overflow: auto;
       margin: auto;
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
+      opacity:0;
+      animation: fadeIn ease-in-out 1;
+      animation-fill-mode: forwards;
+      animation-duration: 400ms;
 
-      svg {
+      #qfLogoSVG {
         margin-top: 10em;
       }
+}
+
+.logo.fadeIn {
+  animation-delay: 0.3s;
 }
 
 .qfSvg {
   width:100%;
   fill:url(#qfPattern);
-  stroke:#58595B;
-  stroke-width:0.25;
-  stroke-miterlimit:10;
+  stroke:none;
 }
 
 .slogan {
@@ -31,11 +33,18 @@
   color: #3fa5c3;
   h1 {
     margin:0;
+    font-size: 2.85em;
+  }
+  h3 {
+    font-size: 1.6em;
   }
   h6 {
-    line-height: 1em;
-    margin: 1em 0;
-    text-decoration: underline;
+    line-height: 1.25em;
+    margin: 0.5em 0;
+    font-size: 1.25em;
+    border-bottom: 1px solid #3fa5c3;
+    display: inline-block;
+    cursor: pointer;
   }
 }
 
@@ -51,19 +60,27 @@
 .sloganRight {
   display: inline-block;
   background: #3fa5c3;
-  color: white;
-  width: 45%;
+  color: #fff;
+  width: 40%;
   text-align: center;
-  margin-left: 4%;
+  margin-left: 5%;
   vertical-align: bottom;
+  cursor: pointer;
 }
 
-.getStartedIcon {
-  background: url(../img/rockOnIcon.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 1em 1em;
-  margin-right: 0.5em;
+#hand {
+  display: inline-block;
+  width: 7%;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
+
+.handOutline {
+  fill:#FFFFFF;
+}
+
+.fingers {
+  fill:#3FA5C3;
 }
 
 .endSoonBlock.competitions {
@@ -71,19 +88,23 @@
   background: #3fa5c3;
   color: #fff;
   position: absolute;
-  top: 15%;
-  right: 0;
-  width: 30%;
+  bottom: 0;
+  width: 25%;
   padding: 0.5em 1em;
+  left: -25%;
+  animation: slideInLeft ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 300ms;
 
-  h3 {
-    text-align: left;
-  }
   h2 {
-    font-size: 3.5em;
+    font-size: 3.25em;
     margin: 0;
     text-align: center;
     line-height: 1em;
+  }
+  h3 {
+    text-align: left;
+    margin-bottom: 1.5em;
   }
   h4 {
     font-size: 1em;
@@ -102,19 +123,23 @@
   background: #3fa5c3;
   color: #fff;
   position: absolute;
-  top: 75%;
-  right: 0;
-  width: 30%;
+  bottom: 0;
+  right: -25%;
+  width: 25%;
   padding: 0.5em 1em;
+  animation: slideInRight ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 275ms;
 
-  h3 {
-    text-align: left;
-  }
   h2 {
-    font-size: 3.5em;
+    font-size: 3.25em;
     margin: 0;
     text-align: center;
     line-height: 1em;
+  }
+  h3 {
+    text-align: left;
+    margin-bottom: 1.5em;
   }
   h4 {
     font-size: 1em;
@@ -128,6 +153,487 @@
   }
 }
 
+.endSoonBlock .subCta {
+    text-align: center;
+
+    .subCtaLeft, .subCtaRight {
+      display: inline-block;
+    }
+}
+
 .endSoonBlock h2 {
   font-family: 'cornerstoneregular';
+
+    .time {
+        font-family: 'latoregular';
+        font-size: 0.35em;
+    }
 }
+
+.endSoonBlock.slideInLeft {
+  animation-delay: 1s;
+}
+
+.endSoonBlock.slideInRight {
+  animation-delay: 1.35s;
+}
+
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 50%;
+}
+
+.arrow {
+  width: 2.5em;
+  height: 2.5em;
+  bottom: -5%;
+  margin: -1em 0 0 -1em;
+  transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px #3fa5c3 solid;
+  border-bottom: 2px #3fa5c3 solid;
+  animation: fadeInDown ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 285ms;
+
+  &:before {
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0em -1.2em;
+    opacity: 0.9;
+    border-left: none;
+    border-top: none;
+    border-right: 2px #3fa5c3 solid;
+    border-bottom: 2px #3fa5c3 solid;
+    animation-duration: 1.35s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.arrow.arrowIn {
+  animation-delay: 1.6s;
+}
+
+@media only screen
+  and (min-width:320px)
+  and (max-width: 959px) {
+
+  .slogan h1 {
+      margin: 0;
+      font-size: 1.2em;
+  }
+
+  .slogan h3 {
+    font-size: 1em;
+  }
+
+  .slogan h6 {
+    display: none;
+  }
+
+  .sloganLeft {
+    margin-top: 0.25em;
+  }
+
+  .sloganRight {
+      width: 60%;
+      margin-top: 1.5em;
+  }
+
+  #hand {
+      width: 10%;
+  }
+
+  #competitionsDemo, #requestsDemo {
+    width: 49%;
+    bottom: 10%;
+
+    h3 {
+      font-size: 0.7em;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.4em;
+    }
+
+    h4 {
+      font-size: 0.4em;
+    }
+  }
+
+  #competitionsDemo {
+    left: -50%;
+  }
+
+  #requestsDemo {
+    right: -50%;
+  }
+
+  .logo {
+    width: 90%;
+    height: 60%;
+  }
+
+  .logo #qfLogoSVG {
+      margin-top: 4em;
+  }
+
+  .arrow {
+    width: 2em;
+    height: 2em;
+    bottom: -5%;
+  }
+
+  .arrow:before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0 -1em;
+  }
+
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 959px)
+  and (orientation: landscape) {
+
+    .slogan h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    .sloganWrapper {
+      text-align: center;
+    }
+
+    .sloganLeft {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .sloganRight {
+      margin-left: auto;
+      width: 35%;
+      margin-right: auto;
+    }
+
+    .logo #qfLogoSVG {
+        margin-top: 1em;
+    }
+
+    .logo {
+      width: 75%;
+      height: 60%;
+    }
+
+    #competitionsDemo, #requestsDemo {
+      bottom: 0%;
+      width: 25%;
+
+      h3 {
+        font-size: 0.7em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      h4 {
+        font-size: 0.5em;
+      }
+
+    }
+
+    .sloganRight {
+      width: 30%;
+      margin-top: 1em;
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+
+}
+
+@media only screen
+  and (min-width:768px)
+  and (max-width: 959px) {
+
+  #competitionsDemo, #requestsDemo {
+    width: 100%;
+
+    h3 {
+      font-size: 1em;
+    }
+
+    h2 {
+      font-size: 4em;
+    }
+
+    h4 {
+      font-size: 0.85em;
+    }
+
+  }
+
+  #requestsDemo {
+    right:-100%;
+    bottom: 8%;
+  }
+
+  #competitionsDemo {
+    left:-100%;
+    bottom: 28%;
+  }
+
+  .sloganWrapper {
+    text-align: center;
+  }
+
+  .sloganLeft {
+      display: inline-block;
+      text-align: center;
+  }
+
+  .slogan h1 {
+    font-size: 3.5em;
+  }
+
+  .slogan h3 {
+      font-size: 1.2em;
+  }
+
+  .slogan h6 {
+    display: inline-block;
+  }
+
+  .logo #qfLogoSVG {
+      margin-top: 0em;
+  }
+
+}
+//
+// @media only screen
+//   and (min-width:608px)
+//   and (max-width: 959px) {
+//
+//     #hand {
+//         width: 7%;
+//     }
+//     .slogan h1 {
+//         font-size: 3em;
+//     }
+//
+//     .slogan h6 {
+//       display: inline-block;
+//       font-size: 1em;
+//     }
+//
+//     .sloganWrapper {
+//       text-align: center;
+//     }
+//
+//     .sloganLeft {
+//         display: inline-block;
+//         text-align: center;
+//     }
+//
+//     #competitionsDemo, #requestsDemo {
+//
+//
+//       h3 {
+//         font-size: 1em;
+//       }
+//
+//       h2 {
+//         font-size: 2.5em;
+//       }
+//
+//       h4 {
+//         font-size: 0.7em;
+//       }
+//
+//     }
+//
+// }
+
+@media only screen
+  and (min-width:768px)
+  and (max-width: 959px) {
+
+    .endSoonBlock {
+        position: absolute;
+        width: 35%;
+    }
+
+    #competitionsDemo, #requestsDemo {
+
+      h3 {
+        font-size: 1em;
+      }
+
+      h2 {
+        font-size: 2.5em;
+      }
+
+      h4 {
+        font-size: 0.7em;
+      }
+
+    }
+
+    #requestsDemo {
+      bottom: 9%;
+    }
+
+    #competitionsDemo {
+      bottom: 25%;
+    }
+
+    #hand {
+      width: 7%;
+    }
+
+    .slogan h3 {
+      font-size: 1em;
+    }
+
+    .sloganRight {
+      width: 60%;
+      margin-top: 1.5em;
+      margin-left: auto;
+    }
+
+    #competitionsDemo h3, #requestsDemo h3 {
+      font-size: 0.85em;
+      text-align: center;
+    }
+
+    #competitionsDemo h4, #requestsDemo h4 {
+      font-size: .55em;
+    }
+}
+
+@media only screen
+  and (min-width:850px)
+  and (max-width: 959px) {
+
+    #competitionsDemo, #requestsDemo {
+      width: 40%;
+      bottom: 15%;
+
+        h3 {
+          font-size: 1.1em;
+        }
+
+        h2 {
+          font-size: 3em;
+        }
+
+        h4 {
+          font-size: 0.7em;
+        }
+
+    }
+
+  }
+
+  @media only screen
+    and (min-width: 960px)
+    and (max-width: 1260px) {
+
+      #competitionsDemo, #requestsDemo {
+        width: 40%;
+        bottom: 0%;
+
+          h3 {
+            font-size: 1.1em;
+          }
+
+          h2 {
+            font-size: 3.2em;
+          }
+
+          h4 {
+            font-size: 0.8em;
+          }
+
+      }
+
+      #competitionsDemo {
+        left: -40%;
+      }
+
+      #requestsDemo {
+        right: -40%;
+      }
+
+      #hand {
+          width: 8%;
+          vertical-align: middle;
+          margin-right: 0.35em;
+      }
+
+      .slogan h3 {
+        font-size: 1.2em;
+      }
+
+      .sloganRight {
+        width: 52%;
+        margin-top: 1.5em;
+        margin-left: auto;
+      }
+
+      .sloganWrapper {
+        text-align: center;
+      }
+
+      .sloganLeft {
+          display: inline-block;
+          text-align: center;
+      }
+
+      .slogan h1 {
+        margin: 0;
+        font-size: 3.85em;
+      }
+
+
+
+    }
+
+
+    @media only screen
+      and (min-width: 1261px) {
+
+        #competitionsDemo, #requestsDemo {
+          bottom: 3%;
+          width: 30%;
+
+          h3 {
+            font-size: 1.5em;
+          }
+
+          h2 {
+            font-size: 3.6em;
+          }
+
+          h4 {
+            font-size: 1.1em;
+          }
+        }
+
+        #competitionsDemo {
+          left: -30%;
+        }
+
+        #requestsDemo {
+          right: -30%;
+        }
+
+    }
