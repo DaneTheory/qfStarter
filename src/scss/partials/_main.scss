@@ -94,12 +94,12 @@
 
 .endSoonBlock.competitions {
   font-family: 'latoregular';
-  background: #3fa5c3;
+  // background: #3fa5c3;
   color: #fff;
   position: absolute;
   bottom: 0;
   width: 25%;
-  padding: 0.5em 1em;
+  // padding: 0.5em 1em;
   left: -25%;
   animation: slideInLeft ease-in-out 1;
   animation-fill-mode: forwards;
@@ -129,13 +129,13 @@
 
 .endSoonBlock.requests {
   font-family: 'latoregular';
-  background: #3fa5c3;
+  // background: #3fa5c3;
   color: #fff;
   position: absolute;
   bottom: 0;
   right: -25%;
   width: 25%;
-  padding: 0.5em 1em;
+  // padding: 0.5em 1em;
   animation: slideInRight ease-in-out 1;
   animation-fill-mode: forwards;
   animation-duration: 275ms;
@@ -186,6 +186,22 @@
 .endSoonBlock.slideInRight {
   animation-delay: 1.35s;
 }
+
+
+
+#competitionsDemo h3, #requestsDemo h3 {
+    /* background: #3fa5c3; */
+    font-size: 1.25em;
+    text-align: center;
+    margin: 1.5em;
+    /* box-shadow: 0px 5px 11px #3fa5c3; */
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.7);
+}
+
+#competitionsDemo, #requestsDemo {
+    bottom: 10%;
+}
+
 
 .arrow,
 .arrow:before {
@@ -658,3 +674,98 @@
         }
 
     }
+
+
+    .countdown {
+        margin: 0;
+        text-align: center;
+        color: #fff;
+        padding: 0;
+        font-family: 'cornerstoneregular';
+    }
+
+
+    .countdown .time-circle {
+        display: inline-block;
+        border-radius: 50%;
+        font-size: 1em;
+        width: 25%;
+        line-height: 5em;
+        text-align: center;
+        position: relative;
+    }
+
+    .countdown .time-circle .progress {
+      width: 10em;
+      height: 10em;
+      position: absolute;
+      left: -1em;
+      top: -2em;
+      z-index: -9;
+      background-color: rgba(0,0,0,.1);
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .countdown .time-circle:hover {
+      // background: #46babd;
+      transition: background 0.3s;
+
+    }
+
+    .countdown .time-circle .time {
+        display: inline-block;
+        font-size: 3.5em;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+    }
+
+    .countdown .time-circle .time-name {
+        font-size: 1.2em;
+        font-family: Arial,sans-serif;
+        position: absolute;
+        bottom: 0.3em;
+        width: 100%;
+        left: -3px;
+        line-height: 1em;
+        color: #000;
+        opacity: .2;
+    }
+
+    .countdown .time-circle .progress {
+        width: 10em;
+        height: 10em;
+        position: absolute;
+        left: -10px;
+        top: -25px;
+        z-index: -9;
+        background-color: rgba(0,0,0,.1);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+.countdown .time-circle .progress:after {
+  content: '';
+  width: 6px;
+  height: 70px;
+  background: #fff;
+  position: absolute;
+  transform: rotate(0deg);
+  transform-origin: 0% 100%;
+}
+
+.countdown .dots {
+    display: inline-block;
+    padding: 20px 5px;
+    font-size: 3em;
+    animation: c 1s infinite;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+@keyframes dots {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
