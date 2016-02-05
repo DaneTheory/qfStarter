@@ -15,7 +15,15 @@
 
       #qfLogoSVG {
         margin-top: 10em;
-        // background: url('/assets/img/testGif2.gif');
+      }
+
+      #qfLogoSVG--shadow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-top: 10em;
       }
 }
 
@@ -285,6 +293,10 @@
       margin-top: 4em;
   }
 
+  .logo #qfLogoSVG--shadow {
+      margin-top: 4em;
+  }
+
   .arrow {
     width: 2em;
     height: 2em;
@@ -326,6 +338,10 @@
     }
 
     .logo #qfLogoSVG {
+        margin-top: 1em;
+    }
+
+    .logo #qfLogoSVG--shadow {
         margin-top: 1em;
     }
 
@@ -414,6 +430,10 @@
   }
 
   .logo #qfLogoSVG {
+      margin-top: 0em;
+  }
+
+  .logo #qfLogoSVG--shadow {
       margin-top: 0em;
   }
 

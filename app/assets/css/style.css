@@ -577,6 +577,13 @@ header {
           animation-duration: 400ms; }
   .logo #qfLogoSVG {
     margin-top: 10em; }
+  .logo #qfLogoSVG--shadow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 10em; }
 
 .logo.fadeIn {
   -webkit-animation-delay: 0.3s;
@@ -793,6 +800,8 @@ header {
     height: 60%; }
   .logo #qfLogoSVG {
     margin-top: 4em; }
+  .logo #qfLogoSVG--shadow {
+    margin-top: 4em; }
   .arrow {
     width: 2em;
     height: 2em;
@@ -817,6 +826,8 @@ header {
     width: 35%;
     margin-right: auto; }
   .logo #qfLogoSVG {
+    margin-top: 1em; }
+  .logo #qfLogoSVG--shadow {
     margin-top: 1em; }
   .logo {
     width: 75%;
@@ -863,6 +874,8 @@ header {
   .slogan h6 {
     display: inline-block; }
   .logo #qfLogoSVG {
+    margin-top: 0em; }
+  .logo #qfLogoSVG--shadow {
     margin-top: 0em; } }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
