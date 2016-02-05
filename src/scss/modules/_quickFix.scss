@@ -1,0 +1,23 @@
+.header {
+  display: none;
+}
+
+#competitionsDemo {
+  display: none;
+}
+
+#requestsDemo {
+  display: none;
+}
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+}
+
+section {
+  height: 100vh;
+}
