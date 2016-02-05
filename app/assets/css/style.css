@@ -576,8 +576,7 @@ header {
   -webkit-animation-duration: 400ms;
           animation-duration: 400ms; }
   .logo #qfLogoSVG {
-    margin-top: 10em;
-    background: url("/assets/img/testGif2.gif"); }
+    margin-top: 10em; }
 
 .logo.fadeIn {
   -webkit-animation-delay: 0.3s;
